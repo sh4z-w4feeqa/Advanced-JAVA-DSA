@@ -1,0 +1,47 @@
+class car{
+    String brake;
+    int acc;
+    String color;
+    String brand;
+    int speed;
+    car(String brake,int acc,String color,String brand,int speed){
+       this.brake=brake;
+        this.acc=acc;
+        this.color=color;
+        this.brand=brand;
+        this.speed=speed;
+    }
+    void display(){
+        System.out.println(brake);
+        System.out.println(acc);
+        System.out.println(color);
+        System.out.println("Brand name: " + brand);
+        System.out.println("speed " + speed);
+    }
+    public void speedAcce(int acc, int speed){
+        if(speed>=acc){
+            System.out.println("break");
+        }else{
+            System.out.println("continue");
+        }
+    }
+}
+class astonmartin extends car{
+    astonmartin(String brake,int acc,String color,String brand,int speed){
+        super(brake,acc,color,brand,speed);
+    }
+    
+}
+class bmw extends car{
+    bmw(String brake,int acc,String color,String brand,int speed){
+        super(brake,acc,color,brand,speed);
+    }
+}
+class main{
+    public static void main(String args[]){
+        astonmartin ast = new astonmartin("Yes",40,"grey","Astonmartin",320);
+        bmw bm = new bmw("Yes",40,"Black","BMW",450);
+        ast.display();
+        bm.display();
+    }
+}
