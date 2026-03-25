@@ -1,0 +1,85 @@
+import java.util.*;
+abstract class Account{
+    long acc;
+    String name ;
+    String branch;
+    String ifsc ;
+    long ph;
+    double balance;
+    
+    Account(long acc, String name, String branch, String ifsc, long ph, double balance ){
+        this.acc  = acc;
+        this.name = name;
+        this.branch =branch;
+        this.ifsc =ifsc;
+        this.ph = ph;
+        this.balance = balance;
+    }
+    abstract void deposit(double amt);
+    abstract void withdraw(double amt);
+    abstract void transfer(long accno, String newBranch, String newIfsc);
+    
+}
+class bank extends Account{
+    bank(long acc, String name, String branch,String ifsc,long ph,double balance){
+        super(acc,name,branch,ifsc,ph,balance);
+    }
+    @Override
+    public void deposit(double amt){
+        balance += amt;
+        System.out.println("Deposit Amount: "+amt);
+        System.out.println("Balance: "+balance);
+    }
+    @Override
+    public void withdraw(double amt){
+        if(amt <= balance){
+            balance -= amt;
+            System.out.println("Withdraw Amount:" + amt);
+            System.out.println("Balance :"+balance);
+        }
+        else{
+            System.out.println("Insufficient balance*");
+        }
+    }
+    @Override
+    public void transfer(long accno, String newBranch, String newIfsc) {
+        System.out.println("Account No: "+accno);
+        System.out.println("New Branch: "+newBranch);
+        System.out.println("IFSC: "+newIfsc);
+        System.out.println("Shifting account " + acc + " from " + branch + " to " + newBranch);
+        this.branch = newBranch;
+        this.ifsc = newIfsc;
+        this.acc = accno;
+        System.out.println("Account successfully shifted to " + newBranch + " (" + newIfsc + ")");
+    }
+    public void show(){
+      System.out.println("-----------------------");
+      System.out.println("\tACCOUNT DETAILS");
+      System.out.println("-----------------------");
+      System.out.println("Holder Name  : "+name);
+      System.out.println("Account No   : "+acc);
+      System.out.println("Branch       : "+branch);
+      System.out.println("IFSC Code    : "+ifsc);
+      System.out.println("Phone Number : "+ph);
+      System.out.println("Balance      : "+balance);
+    }
+}
+public class Main{
+    public static void main(String args[]){
+        Scanner scn = new Scanner(System.in);
+        bank b = new bank(121028,"Aariz","SBI","SBIN405826",6284058,5800.40);
+        boolean f = true;
+        while(true){
+          System.out.println("\n1. Deposit\n2. Withdraw \n3. Transfer\n4. Account Details\n5. Exit\nEnter choice: ");
+          int ch = scn.nextInt();
+          switch(ch){
+            case 1: b.deposit(1020); break;
+            case 2: b.withdraw(1000); break;
+            case 3: b.transfer(101228, "HDFC", "HDFC584028"); break;
+            case 4: b.show(); break;
+            case 5: System.out.println("Please leave."); scn.close(); return;
+            default: System.out.println("Invalid choice."); break;
+          }
+        }
+    }
+}
