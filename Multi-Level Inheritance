@@ -1,0 +1,58 @@
+class Student{
+    String name;
+    int id;
+    String dept;
+    
+    Student(String name, int id, String dept){
+        this.name= name ;
+        this.id=id;
+        this.dept=dept;
+    }
+    void display(){
+        System.out.println("Name : "+name);
+        System.out.println("Id : "+id);
+        System.out.println("Dept : "+dept);
+    }
+    void show(){
+        System.out.println("I'm from chennai");
+    }   
+}
+class faculty extends Student{
+    faculty(String name,int id,String dept){
+        super(name,id,dept);
+    }
+    void display2(){
+        System.out.println("Technical Trainer");
+    }
+    void printdata(){
+        super.show();
+        super.display();
+    }
+}
+class college extends faculty{
+    String clgname ="St.joseph";
+    String place="Chennai";
+    
+    college(String name, int id, String dept){
+        super(name, id, dept);
+    }
+    void details(){
+        System.out.println("College name: " +clgname);
+        System.out.println("Location:"+place );
+    }
+}
+class Main{
+    public static void main(String args[]){
+        // faculty f1 = new  faculty("Ram",98,"Mech");
+        // faculty f2 = new  faculty("pravin",38,"EEE");
+        // f1.display();
+        // f1.display2();
+        // f2.display();
+        // //f1.show();
+        //f1.printdata();       
+        college  c1 = new college("Uv",45,"Mech");
+        c1.details();
+        c1.printdata();
+        
+    }
+}
