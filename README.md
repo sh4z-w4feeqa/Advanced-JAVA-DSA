@@ -1,6 +1,6 @@
 # JAVA-DSA-Training
 
-# Inheritance
+**Inheritance**
 
 * Single Inheritance
   
@@ -8,6 +8,6 @@
   
 * Hierarchical Inheritance
 
-# Abstraction
+**Abstraction**
 
-# Encapsulation
+**Encapsulation**
