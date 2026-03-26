@@ -20,7 +20,7 @@ public class Main{
             System.out.println("JAVA");
           try{ Thread.sleep(3000); } 
           catch(InterruptedException e){};
-        }
+        };
         Thread t2 = new Thread(r1);
         t2.start();
         System.out.println("End of statement");
