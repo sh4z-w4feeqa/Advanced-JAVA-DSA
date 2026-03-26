@@ -21,27 +21,20 @@ class car{
     public void speedAcce(int acc, int speed){
         if(speed>=acc){
             System.out.println("break");
-        }else{
-            System.out.println("continue");
-        }
-    }
-}
+        }else{ System.out.println("continue");
+}}}
 class astonmartin extends car{
     astonmartin(String brake,int acc,String color,String brand,int speed){
         super(brake,acc,color,brand,speed);
-    }
-    
-}
+}}
 class bmw extends car{
     bmw(String brake,int acc,String color,String brand,int speed){
         super(brake,acc,color,brand,speed);
-    }
-}
+}}
 class main{
     public static void main(String args[]){
         astonmartin ast = new astonmartin("Yes",40,"grey","Astonmartin",320);
         bmw bm = new bmw("Yes",40,"Black","BMW",450);
         ast.display();
         bm.display();
-    }
-}
+}}
