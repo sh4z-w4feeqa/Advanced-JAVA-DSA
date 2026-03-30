@@ -18,8 +18,18 @@
 
 **Two Pointer Techniques**
 
+*Opposite Directions*
+
 * Pair Sum
   
 * Palindrome
   
 * Find Nearest Value
+
+*Same Direction*
+
+* Remove duplicates
+  
+* Partitioning Array
+  
+* Cycle detection
