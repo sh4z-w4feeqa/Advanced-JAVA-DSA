@@ -15,3 +15,11 @@
 **Multithreading**
 
 **Runnable Interface**
+
+**Two Pointer Techniques**
+
+* Pair Sum
+  
+* Palindrome
+  
+* Find Nearest Value
