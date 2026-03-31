@@ -40,3 +40,10 @@
   
 * Longest subarray sum
 
+**String Based**
+
+* Length of longest subarray without repeating characters
+  
+* 
+
+
