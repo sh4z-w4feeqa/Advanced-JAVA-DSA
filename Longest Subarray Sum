@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int n = scn.nextInt();
+      int[] arr = new int[n];
+      for(int i = 0; i<n; i++)
+      {
+        arr[i] = scn.nextInt();
+      }
+      int target = scn.nextInt();
+      int start = 0;
+      int sum = 0;
+      int maxlen = 0;
+      for(int end = 0; end<n; end++)
+      {
+        sum+=arr[end];
+        while(sum>target)
+        {
+          sum-=arr[start];
+          start++;
+        }
+        maxlen = Math.max(maxlen, end - start+1);
+      }
+      System.out.print(maxlen);
+    }
+}
