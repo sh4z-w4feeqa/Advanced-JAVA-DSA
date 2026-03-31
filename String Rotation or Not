@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      String s1 = scn.nextLine();
+      String s2 = scn.nextLine();
+      String s3 = s1 + s1;
+      System.out.println(s3);
+      
+      if(s1.length() != s2.length()){
+        System.out.println("No");
+      } else if(s3.contains(s2)){
+          System.out.println("Yes");
+        }
+        else{
+          System.out.println("No");
+        }
+    }
+}
