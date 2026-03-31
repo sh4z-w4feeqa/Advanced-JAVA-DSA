@@ -46,4 +46,10 @@
   
 * Naive Algorithm (Text - Pattern)
 
+* String Rotation or not
+
+* String Compression
+
+* Encoded String 
+
 
