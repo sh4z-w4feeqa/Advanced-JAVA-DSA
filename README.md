@@ -50,6 +50,35 @@
 
 * String Compression
 
-* Encoded String 
+* Encoded String
 
+* Remove Spaces in String
+
+* Encoded String(for multiple digits)
+
+
+**Searching Technique Based**
+
+* Binary Search
+
+* First & Last Occurrence
+
+* Count Occurrence
+
+* Floor of elements
+
+* Ceil of elements
+
+* Reverse Binary Search
+
+**Sorting Techniques**
+
+* Bubble Sort
+
+* Selection Sort
+
+* Insertion Sort
+
+* 
+  
 
