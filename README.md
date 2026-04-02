@@ -79,6 +79,10 @@
 
 * Insertion Sort
 
-* 
+* Merge Sort 
   
+**Recursion**
 
+* Factorial
+
+* Print 1 to n
