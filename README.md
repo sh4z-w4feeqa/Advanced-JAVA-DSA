@@ -92,12 +92,6 @@
 
 *Priority Queue*
 
-*Applications* 
-* Balanced Parantheses
-* Expression Conversion (Infix, Postfix, Prefix)
-* Expression Evaluation
-* String Reversal
-
 **BINARY TREE**
 
 * Inorder Traversal
