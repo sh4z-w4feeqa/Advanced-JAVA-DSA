@@ -1,0 +1,58 @@
+import java.util.*;
+class Node{
+  int data;
+  Node left, right;
+  Node(int data){
+    this.data = data;
+    this.left = null;
+    this.right = right;
+}}
+public class Main{
+  static Node buildTree(Scanner scn){
+    int val = scn.nextInt();
+    if(val==-1) return null;
+    Node root = new Node(val);
+    Queue<Node> q = new LinkedList<>();
+    q.add(root);
+    while(!q.isEmpty()){
+      Node temp = q.poll();
+      int leftval = scn.nextInt();
+      if(leftval!=-1){
+        temp.left = new Node(leftval);
+        q.add(temp.left);
+      }
+      int rightval = scn.nextInt();
+      if(rightval!=-1){
+        temp.right = new Node(rightval);
+        q.add(temp.right);
+      }
+    }
+    return root;
+  }
+  static void inorder(Node root){
+    if(root!=null){
+      inorder(root.left);
+      System.out.print(root.data+" ");
+      inorder(root.right);
+}}
+  static void preorder(Node root){
+    if(root!=null){
+      System.out.print(root.data+" ");
+      preorder(root.left);
+      preorder(root.right);
+}}
+  static void postorder(Node root){
+    if(root!=null){
+      postorder(root.left);
+      postorder(root.right);
+      System.out.print(root.data+" ");
+}}
+  public static void main(String[] args){
+    Scanner scn = new Scanner(System.in);
+    Node root = buildTree(scn);
+    inorder(root);
+    System.out.println();
+    preorder(root);
+    System.out.println();
+    postorder(root);
+}}
