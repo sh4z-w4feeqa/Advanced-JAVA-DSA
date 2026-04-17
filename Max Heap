@@ -1,8 +1,8 @@
 import java.util.*;
 
-class Minheap{
+class Maxheap{
   int arr[];
-  Minheap(int n){
+  Maxheap(int n){
     arr = new int[n];
   }
   void create(int num, int index){
@@ -30,11 +30,11 @@ public class Main{
     Scanner scn = new Scanner(System.in);
     int n, num;
     n = scn.nextInt();
-    Minheap min = new Minheap(n);
+    Maxheap max = new Maxheap(n);
     for(int i = 0; i<n; i++){
       num = scn.nextInt();
-      min.create(num, i);
+      max.create(num, i);
     }
-    min.display();
+    max.display();
   }
 }
